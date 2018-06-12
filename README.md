@@ -24,4 +24,4 @@ Bootstrap cards with Avengers heros and all cards are responsive
 
 ## Charts
 
-Coming soon
+Here I used [ng2-charts](https://www.npmjs.com/package/ng2-charts) to complete dashboard.

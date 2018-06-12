@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -37,7 +38,8 @@ import { DashHomeComponent } from './dash-home/dash-home.component';
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

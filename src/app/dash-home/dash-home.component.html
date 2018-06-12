@@ -1,3 +1,95 @@
-<p>
-  dash-home works!
-</p>
+<div class="container-fluid">
+  
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <h4>Line Chart</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div style="display: block;">
+              <canvas baseChart width="400" height="400"
+                          [datasets]="lineChartData"
+                          [labels]="lineChartLabels"
+                          [options]="lineChartOptions"
+                          [colors]="lineChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="lineChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 10px">
+              <table class="table table-responsive table-condensed">
+                <tr>
+                  <th *ngFor="let label of lineChartLabels">{{label}}</th>
+                </tr>
+                <tr *ngFor="let d of lineChartData">
+                  <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+                </tr>
+              </table>
+              <button (click)="randomize()" class="btn btn-primary">Change Data</button>
+            </div>
+          </div>
+          
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <h4>Bar Chart</h4>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div style="display: block;">
+              <canvas baseChart width="400" height="400"
+                          [datasets]="lineChartData"
+                          [labels]="lineChartLabels"
+                          [options]="lineChartOptions"
+                          [colors]="barChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="barChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        
+          <hr />
+        
+        <div class="row">
+          <h4>Dynamic Charts</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+ 
+              <canvas baseChart
+                          [data]="polarAreaChartData"
+                          [labels]="polarAreaChartLabels"
+                          [legend]="polarAreaLegend"
+                          [chartType]="dynChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <div class="col-md-6">
+              <canvas baseChart
+                          [data]="pieChartData"
+                          [labels]="pieChartLabels"
+                          [chartType]="pieChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <div class="col-md-12 text-center" style="margin-top: 10px;height: 50%">
+              <button (click)="randomizeType()" style="display: inline-block" class="btn btn-primary">Toggle</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
