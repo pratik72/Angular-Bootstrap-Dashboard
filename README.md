@@ -12,7 +12,7 @@ Angular Reactive Forms added , use link `http://localhost:4200/forms`. This app 
 
 ## Tables
 
-Here I use ng2-smart-table to make table listing faster and responsive. Most intesting things they provide run time add/remove/edit row.
+Here I use [ng2-smart-table](https://akveo.github.io/ng2-smart-table/#/) to make table listing faster and responsive. Most intesting things they provide run time add/remove/edit row.
 
 ## Modals
 
