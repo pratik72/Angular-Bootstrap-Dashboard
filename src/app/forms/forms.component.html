@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <h4>Reactive Angular Form</h4>
+        </div>
+        <div class="row">
+          <div class="col">
+            <form [formGroup]="userForm">
+                <div class="form-group">
+                  <label for="usr">Name:</label>
+                  <input type="text" class="form-control" formControlName="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="email" class="form-control" formControlName="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group">
+                  <label for="dept">Department:</label>
+                  <select class="form-control" formControlName="department">
+                    <option>Finance</option>
+                    <option>HR</option>
+                    <option>Sales</option>
+                    <option>Support</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <textarea class="form-control" rows="5" formControlName="comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="col">
+            <p>Name : {{ userForm.get('name').value }}</p>
+            <p>Email : {{ userForm.get('email').value }}</p>
+            <p>Password : {{ userForm.get('password').value }}</p>
+            <p>Department : {{ userForm.get('department').value }}</p>
+            <pre>Comment : {{ userForm.get('comment').value }}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>

@@ -1,0 +1,67 @@
+<!-- Bootstrap Modal-->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Bootstrap Test Modal</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Hey, You open bootstrap modal... :)</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-dark" (click)="c()">Close</button>
+    </div>
+  </ng-template>
+
+
+
+  <!-- Custom full display Modal-->
+  <div class="custom-modal full-modal" #customModal *ngIf="customModalOpened">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">Custom Test Modal</h4>
+          <button type="button" class="close" aria-label="Close" (click)="ctClose()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Hey, You open Custom full display modal... :)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" (click)="ctClose()">Close</button>
+        </div>
+    </div>
+  </div>
+  
+  
+
+
+  <div class="container-fluid">
+  
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col">
+            <div class="row">
+                <h5>1. Bootstrap simple modal</h5>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <button class="btn btn-lg btn-primary" (click)="open(content)">Launch Bootstrap modal</button>
+              </div>
+            </div>
+    
+            <hr />
+            <div class="row">
+                <h5>2. Custom Full display Modal</h5>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <button class="btn btn-lg btn-info" (click)="openCustomModal()">Launch Custom modal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
